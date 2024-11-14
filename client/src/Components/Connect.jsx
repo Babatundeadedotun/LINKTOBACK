@@ -12,9 +12,13 @@ const Connect = () => {
 
     // const endpoint = "http://localhost:8000/cars"
 
-    const url = "http://localhost:8000/submit";
+    // const url = "http://localhost:8000/submit";
 
-    const url_db = "http://localhost:8000/data";
+    const url = "https://linktobackendd.vercel.app/submit"
+
+    const url_db = "https://linktobackendd.vercel.app/data"
+
+    // const url_db = "http://localhost:8000/data";
 
     const fetchData = async () => {
         try {
@@ -37,7 +41,7 @@ const Connect = () => {
 
         const deleteItem = async (id) => {
             try {
-                const response = await axios.delete(`http://localhost:8000/data/${id}`);
+                const response = await axios.delete(`https://linktobackendd.vercel.app/data/${id}`);
                 if(response.status === 200) {
                     setList(list.filter((item) => item._id !== id));
                     alert(`Item deleted successfully`);
