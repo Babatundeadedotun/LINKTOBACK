@@ -79,7 +79,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
         })
 
         app.get("/", (req,res) => {
-            console.log("Welcome to Home Page");
+            // console.log("Welcome to Home Page");
+            res.send("Welcome to Home Page")
             
         })
 
